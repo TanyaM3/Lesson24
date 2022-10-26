@@ -7,12 +7,13 @@ public class ValidatorImpl implements Validator {
 	private MatchersMapMaker maker = new MatchersMapMaker();
 	private final String paramSeparator = ", ";
 	private final String correct = "Correct";
-	private String message = "Incorrect input data:";
 	private final String email = maker.getKeyEmail();
 	private final String password = maker.getKeyPassword();
 	private final String username = maker.getKeyUsername();
 	private Map<String, Pattern> matchersMap = maker.makeMap();
+	private String message = "Incorrect input data:";
 
+	
 	@Override
 	public String validate(String value) {
 
